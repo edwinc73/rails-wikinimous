@@ -1,0 +1,8 @@
+<% @articles.each do |article| %>
+  <h2>
+    <%= link_to article.title.truncate_words(3), "articles/#{article.id}" , class:"no-underscore"%>
+  </h2>
+  <p>
+    <%= article.content.truncate_words(12) %>
+  </p>
+<% end %>

@@ -1,0 +1,7 @@
+<%= form_with model: @article, url: "/articles/#{@article.id}" do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_area :content, size: "60x10" %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Back", articles_path, class:"btn btn-primary my-5"%>
